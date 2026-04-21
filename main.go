@@ -332,6 +332,7 @@ func printBanner() {
 	fmt.Println(GRY + "  SentinelX HTTP" + RST + GRY + DIM + " — Web Status" + RST)
 	fmt.Println(GRY + DIM + "  Author : WildanDev" + RST)
 	fmt.Println()
+	checkVersion()
 }
 
 func main() {
