@@ -17,42 +17,17 @@ import (
 )
 
 const (
-	RST     = "\033[0m"
-	CYN     = "\033[36m"
-	GRN     = "\033[32m"
-	RED     = "\033[31m"
-	YEL     = "\033[33m"
-	BLU     = "\033[34m"
-	MAG     = "\033[35m"
-	GRY     = "\033[90m"
-	BOLD    = "\033[1m"
-	DIM     = "\033[2m"
-	Version = "v1.0.3"
+	RST  = "\033[0m"
+	CYN  = "\033[36m"
+	GRN  = "\033[32m"
+	RED  = "\033[31m"
+	YEL  = "\033[33m"
+	BLU  = "\033[34m"
+	MAG  = "\033[35m"
+	GRY  = "\033[90m"
+	BOLD = "\033[1m"
+	DIM  = "\033[2m"
 )
-
-func checkVersion() {
-	client := &http.Client{Timeout: 5 * time.Second}
-	resp, err := client.Get("https://api.github.com/repos/SentinelXoffical/sxhttp/releases/latest")
-	if err != nil {
-		return
-	}
-	defer resp.Body.Close()
-
-	var data struct {
-		TagName string `json:"tag_name"`
-	}
-	json.NewDecoder(resp.Body).Decode(&data)
-
-	if data.TagName == "" {
-		return
-	}
-
-	if data.TagName != Version {
-		fmt.Printf(GRY+"  [INF] Current sxhttp version: "+BOLD+"%s"+RST+YEL+" (outdated, latest: %s)"+RST+"\n\n", Version, data.TagName)
-	} else {
-		fmt.Printf(GRY+"  [INF] Current sxhttp version: "+BOLD+"%s"+RST+GRN+" (latest)"+RST+"\n\n", Version)
-	}
-}
 
 var userAgents = []string{
 	"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
