@@ -69,8 +69,8 @@ func printBanner() {
 	fmt.Print(CYN + ` ___/ /  __/ / / / /_/ / / / /  __/ /___/   |` + RST + "\n")
 	fmt.Print(CYN + `/____/\___/_/ /_/\__/_/_/ /_/\___/_____/_/|_|` + RST + "\n")
 	fmt.Println()
-	fmt.Println(GRY + DIM + "  SentinelX HTTP  //  Web Status Intelligence" + RST)
-	fmt.Println(GRY + DIM + "  github.com/SentinelXoffical/sxhttp  //  v1.0.0" + RST)
+	fmt.Println(GRY + "  SentinelX HTTP" + RST + GRY + DIM + " — Web Status" + RST)
+    fmt.Println(GRY + DIM + "  Author : WildanDev" + RST)
 	fmt.Println()
 }
 
