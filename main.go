@@ -70,7 +70,7 @@ func printBanner() {
 	fmt.Print(CYN + `/____/\___/_/ /_/\__/_/_/ /_/\___/_____/_/|_|` + RST + "\n")
 	fmt.Println()
 	fmt.Println(GRY + DIM + "  SentinelX HTTP  //  Web Status Intelligence" + RST)
-	fmt.Println(GRY + DIM + "  github.com/sentinelx/http  //  v1.0.0" + RST)
+	fmt.Println(GRY + DIM + "  github.com/SentinelXoffical/sxhttp  //  v1.0.0" + RST)
 	fmt.Println()
 }
 
